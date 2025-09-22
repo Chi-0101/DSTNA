@@ -5,10 +5,7 @@ import torch.nn.functional as F
 
 
 class DSTNA(nn.Module):
-    """
-    Deep Streaming Tensor Network Architecture (DSTNA)
-    A neural network with dynamic structure adaptation and concept drift detection.
-    """
+  
 
     def __init__(self, args):
         super(DSTNA, self).__init__()

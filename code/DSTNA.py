@@ -175,7 +175,7 @@ class DSTNA(nn.Module):
     def concept_drift_detect(self):
         """Detect concept drift based on alpha vector and JS divergence."""
         # Alpha drift detection
-        alpha_drift = torch.std(self.alpha_vector) <= self.config.theta
+        alpha_drift = torch.std(self.alpha_vector) >= self.config.theta
         
         # JS divergence drift detection
         if len(self.window_samples) >= self.window_size:
